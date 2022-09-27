@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
 require_relative 'lib/contact_options'
 
-ContactOptions.new
+response = File.read('sample.json')
+
+ContactOptions.call(response:, param: 'all-contacts')
