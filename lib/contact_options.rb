@@ -18,7 +18,7 @@ class ContactOptions
   def call
     @records = GenerateRankingAndContactOptions.call(@records)
     @records.sort_by! { |record| last_name(record) + first_name(record) + middle_name(record) }
-    puts @records.to_json
+    @records.to_json
   end
 
   private
